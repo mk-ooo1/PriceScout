@@ -29,6 +29,8 @@ export async function GET() {
   return NextResponse.json({ merchants });
 }
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

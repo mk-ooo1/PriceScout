@@ -9,6 +9,8 @@ const imageSchema = z.object({
   altText: z.string().optional(),
 });
 
+export const dynamic = "force-dynamic";
+
 // Create a new image for a product
 export async function POST(
   req: NextRequest,

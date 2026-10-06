@@ -13,6 +13,8 @@ const patchSchema = z.object({
   isActive: z.boolean().optional(),
 });
 
+export const dynamic = "force-dynamic";
+
 export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }
@@ -34,7 +36,7 @@ export async function PATCH(
 }
 
 export async function DELETE(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   const session = await getServerSession(authOptions);

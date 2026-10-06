@@ -15,8 +15,10 @@ const updateSchema = z.object({
   isPublished: z.boolean().optional(),
 });
 
+export const dynamic = "force-dynamic";
+
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   const session = await getServerSession(authOptions);
@@ -55,7 +57,7 @@ export async function PATCH(
 }
 
 export async function DELETE(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
 ) {
   const session = await getServerSession(authOptions);

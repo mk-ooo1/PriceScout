@@ -11,6 +11,8 @@ const categorySchema = z.object({
   parentId: z.string().nullable().optional(),
 });
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

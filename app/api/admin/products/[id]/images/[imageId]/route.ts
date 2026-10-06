@@ -6,6 +6,8 @@ import { UTApi } from "uploadthing/server";
 
 const utapi = new UTApi();
 
+export const dynamic = "force-dynamic";
+
 // Delete a product image
 export async function DELETE(
   req: NextRequest,
