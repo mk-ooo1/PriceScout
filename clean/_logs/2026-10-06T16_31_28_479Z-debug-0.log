@@ -7,12 +7,12 @@
 6 silly config load:file:C:\nvm4w\nodejs\etc\npmrc
 7 verbose title npm run build
 8 verbose argv "run" "build"
-9 verbose logfile logs-max:10 dir:D:\new projects\affiliate-platform\clean\_logs\2026-09-26T10_55_48_905Z-
-10 verbose logfile D:\new projects\affiliate-platform\clean\_logs\2026-09-26T10_55_48_905Z-debug-0.log
+9 verbose logfile logs-max:10 dir:D:\new projects\affiliate-platform\clean\_logs\2026-10-06T16_31_28_479Z-
+10 verbose logfile D:\new projects\affiliate-platform\clean\_logs\2026-10-06T16_31_28_479Z-debug-0.log
 11 silly logfile start cleaning logs, removing 1 files
 12 silly logfile done cleaning log files
 13 verbose cwd D:\new projects\affiliate-platform
-14 verbose os Windows_NT 10.0.26200
+14 verbose os Windows_NT 10.0.26300
 15 verbose node v22.20.0
 16 verbose npm  v10.9.3
 17 verbose exit 0

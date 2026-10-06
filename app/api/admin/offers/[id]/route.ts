@@ -16,6 +16,20 @@ const patchSchema = z.object({
 
 export const dynamic = "force-dynamic";
 
+export async function GET(
+  req: NextRequest,
+  { params }: { params: { id: string } }
+) {
+  const session = await getServerSession(authOptions);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const offer = await prisma.offer.findUnique({
+    where: { id: params.id },
+  });
+  if (!offer) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  return NextResponse.json({ offer });
+}
+
 export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }
