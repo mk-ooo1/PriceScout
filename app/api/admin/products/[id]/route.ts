@@ -17,25 +17,6 @@ const updateSchema = z.object({
 
 export const dynamic = "force-dynamic";
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
-  const session = await getServerSession(authOptions);
-  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-
-  const product = await prisma.product.findUnique({
-    where: { id: params.id },
-    include: {
-      category: true,
-      images: true,
-      offers: { include: { merchant: true }, orderBy: { price: "asc" } },
-    },
-  });
-  if (!product) return NextResponse.json({ error: "Not found" }, { status: 404 });
-  return NextResponse.json({ product });
-}
-
 export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }
