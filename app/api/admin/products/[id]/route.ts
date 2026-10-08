@@ -17,6 +17,10 @@ const updateSchema = z.object({
 
 export const dynamic = "force-dynamic";
 
+export async function GET() {
+  return NextResponse.json({ error: "Method Not Allowed" }, { status: 405 });
+}
+
 export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }

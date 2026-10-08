@@ -8,6 +8,10 @@ const utapi = new UTApi();
 
 export const dynamic = "force-dynamic";
 
+export async function GET() {
+  return NextResponse.json({ error: "Method Not Allowed" }, { status: 405 });
+}
+
 // Delete a product image
 export async function DELETE(
   req: NextRequest,
