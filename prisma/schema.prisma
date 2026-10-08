@@ -126,7 +126,7 @@ model PriceHistory {
 model ClickEvent {
   id         String   @id @default(cuid())
   offerId    String
-  offer      Offer    @relation(fields: [offerId], references: [id])
+  offer      Offer    @relation(fields: [offerId], references: [id], onDelete: Cascade)
   sessionId  String?
   ipHash     String?          // salted hash only, never raw IP
   userAgent  String?
