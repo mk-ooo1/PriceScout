@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { logClickAndGetRedirect } from "@/lib/affiliate";
 
+export const dynamic = "force-dynamic";
+
 // Basic in-memory token bucket per IP hash for click-fraud mitigation.
 // Swap for Redis (Upstash) once deployed on more than one instance.
 const RATE_LIMIT_WINDOW_MS = 10_000;
