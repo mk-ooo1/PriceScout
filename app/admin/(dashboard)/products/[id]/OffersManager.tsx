@@ -37,7 +37,7 @@ export default function OffersManager({
 
   async function updateOffer(id: string, patch: Partial<Offer>) {
     setError(null);
-    const res = await fetch(`/api/admin/offers/${id}`, {
+    const res = await fetch(`/api/admin/offers?id=${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(patch),
@@ -51,7 +51,7 @@ export default function OffersManager({
 
   async function deleteOffer(id: string) {
     if (!confirm("Remove this offer?")) return;
-    const res = await fetch(`/api/admin/offers/${id}`, { method: "DELETE" });
+    const res = await fetch(`/api/admin/offers?id=${id}`, { method: "DELETE" });
     if (res.ok) setOffers((prev) => prev.filter((o) => o.id !== id));
     else setError("Failed to delete offer.");
   }

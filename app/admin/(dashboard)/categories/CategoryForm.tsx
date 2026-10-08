@@ -56,7 +56,7 @@ export default function CategoryForm({ initialData, categories }: CategoryFormPr
     };
 
     const url = isEditing
-      ? `/api/admin/categories/${initialData.id}`
+      ? `/api/admin/categories?id=${initialData.id}`
       : "/api/admin/categories";
     const method = isEditing ? "PATCH" : "POST";
 

@@ -16,7 +16,7 @@ export default function DeleteCategoryButton({ id, disabled }: { id: string, dis
     if (!confirm("Are you sure you want to delete this category?")) return;
 
     setDeleting(true);
-    const res = await fetch(`/api/admin/categories/${id}`, { method: "DELETE" });
+    const res = await fetch(`/api/admin/categories?id=${id}`, { method: "DELETE" });
 
     if (!res.ok) {
       const data = await res.json().catch(() => ({}));

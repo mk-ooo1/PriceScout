@@ -4,6 +4,8 @@ import { prisma } from "@/lib/db";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/admin/auth";
 
+export const dynamic = "force-dynamic";
+
 const merchantSchema = z.object({
   name: z.string().min(2),
   network: z.string().optional(),
@@ -21,16 +23,6 @@ function slugify(name: string) {
     .replace(/(^-|-$)/g, "");
 }
 
-export async function GET() {
-  const session = await getServerSession(authOptions);
-  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-
-  const merchants = await prisma.merchant.findMany({ orderBy: { name: "asc" } });
-  return NextResponse.json({ merchants });
-}
-
-export const dynamic = "force-dynamic";
-
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -46,4 +38,41 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json({ merchant }, { status: 201 });
+}
+
+export async function PATCH(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "Missing merchant id" }, { status: 400 });
+
+  const body = await req.json();
+  const parsed = merchantSchema.partial().safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
+  }
+
+  const data: any = { ...parsed.data };
+  if (parsed.data.name) {
+    data.slug = slugify(parsed.data.name);
+  }
+
+  const merchant = await prisma.merchant.update({
+    where: { id },
+    data,
+  });
+
+  return NextResponse.json({ merchant });
+}
+
+export async function DELETE(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "Missing merchant id" }, { status: 400 });
+
+  await prisma.merchant.delete({ where: { id } });
+  return NextResponse.json({ ok: true });
 }

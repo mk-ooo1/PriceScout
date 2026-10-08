@@ -5,6 +5,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/admin/auth";
 import { buildAffiliateUrl } from "@/lib/build-affiliate-url";
 
+export const dynamic = "force-dynamic";
+
 const patchSchema = z.object({
   price: z.number().positive().optional(),
   mrp: z.number().positive().optional(),
@@ -14,18 +16,12 @@ const patchSchema = z.object({
   deepLink: z.string().url().optional(),
 });
 
-export const dynamic = "force-dynamic";
-
-export async function GET() {
-  return NextResponse.json({ error: "Method Not Allowed" }, { status: 405 });
-}
-
-export async function PATCH(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function PATCH(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "Missing offer id" }, { status: 400 });
 
   const body = await req.json();
   const parsed = patchSchema.safeParse(body);
@@ -38,19 +34,16 @@ export async function PATCH(
   // If deepLink is being updated, we need to recalculate the affiliateUrl
   if (parsed.data.deepLink) {
     const existingOffer = await prisma.offer.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: { merchant: true },
     });
     if (existingOffer) {
-      updateData.affiliateUrl = buildAffiliateUrl(
-        existingOffer.merchant,
-        parsed.data.deepLink
-      );
+      updateData.affiliateUrl = buildAffiliateUrl(existingOffer.merchant, parsed.data.deepLink);
     }
   }
 
   const offer = await prisma.offer.update({
-    where: { id: params.id },
+    where: { id },
     data: updateData,
   });
 
@@ -63,13 +56,13 @@ export async function PATCH(
   return NextResponse.json({ offer });
 }
 
-export async function DELETE(
-  req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+export async function DELETE(req: NextRequest) {
   const session = await getServerSession(authOptions);
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
-  await prisma.offer.delete({ where: { id: params.id } });
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "Missing offer id" }, { status: 400 });
+
+  await prisma.offer.delete({ where: { id } });
   return NextResponse.json({ ok: true });
 }

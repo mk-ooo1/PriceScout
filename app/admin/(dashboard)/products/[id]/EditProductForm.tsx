@@ -34,7 +34,7 @@ export default function EditProductForm({
     setSaving(true);
     setError(null);
 
-    const res = await fetch(`/api/admin/products/${product.id}`, {
+    const res = await fetch(`/api/admin/products?id=${product.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, brand, categoryId, description, isPublished }),
@@ -54,7 +54,7 @@ export default function EditProductForm({
 
   async function handleDelete() {
     if (!confirm("Delete this product and all its offers? This can't be undone.")) return;
-    const res = await fetch(`/api/admin/products/${product.id}`, { method: "DELETE" });
+    const res = await fetch(`/api/admin/products?id=${product.id}`, { method: "DELETE" });
     if (res.ok) router.push("/admin/products");
     else setError("Failed to delete — you may need admin (not editor) permissions.");
   }

@@ -63,3 +63,47 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json({ product }, { status: 201 });
 }
+
+const updateSchema = z.object({
+  title: z.string().min(3).optional(),
+  brand: z.string().optional(),
+  categoryId: z.string().optional(),
+  description: z.string().optional(),
+  specs: z.record(z.string()).optional(),
+  metaTitle: z.string().optional(),
+  metaDescription: z.string().optional(),
+  isPublished: z.boolean().optional(),
+});
+
+export async function PATCH(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "Missing product id" }, { status: 400 });
+
+  const body = await req.json();
+  const parsed = updateSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
+  }
+
+  const product = await prisma.product.update({
+    where: { id },
+    data: parsed.data,
+  });
+  return NextResponse.json({ product });
+}
+
+export async function DELETE(req: NextRequest) {
+  const session = await getServerSession(authOptions);
+  if (!session || (session.user as { role?: string })?.role !== "ADMIN") {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "Missing product id" }, { status: 400 });
+
+  await prisma.product.delete({ where: { id } });
+  return NextResponse.json({ ok: true });
+}
