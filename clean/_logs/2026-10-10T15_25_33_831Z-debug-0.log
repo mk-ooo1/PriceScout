@@ -1,0 +1,19 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:C:\Users\khanm\AppData\Local\nvm\v22.20.0\node_modules\npm\npmrc
+4 silly config load:file:D:\new projects\affiliate-platform\.npmrc
+5 silly config load:file:C:\Users\khanm\.npmrc
+6 silly config load:file:C:\nvm4w\nodejs\etc\npmrc
+7 verbose title npm run build
+8 verbose argv "run" "build"
+9 verbose logfile logs-max:10 dir:D:\new projects\affiliate-platform\clean\_logs\2026-10-10T15_25_33_831Z-
+10 verbose logfile D:\new projects\affiliate-platform\clean\_logs\2026-10-10T15_25_33_831Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 verbose cwd D:\new projects\affiliate-platform
+14 verbose os Windows_NT 10.0.26300
+15 verbose node v22.20.0
+16 verbose npm  v10.9.3
+17 verbose exit 0
+18 info ok
