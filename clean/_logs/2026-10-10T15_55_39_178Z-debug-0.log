@@ -1,0 +1,830 @@
+0 verbose cli C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.3
+2 info using node@v22.20.0
+3 silly config load:file:C:\Users\khanm\AppData\Local\nvm\v22.20.0\node_modules\npm\npmrc
+4 silly config load:file:D:\new projects\affiliate-platform\.npmrc
+5 silly config load:file:C:\Users\khanm\.npmrc
+6 silly config load:file:C:\nvm4w\nodejs\etc\npmrc
+7 verbose title npm install nodemailer
+8 verbose argv "install" "nodemailer"
+9 verbose logfile logs-max:10 dir:D:\new projects\affiliate-platform\clean\_logs\2026-10-10T15_55_39_178Z-
+10 verbose logfile D:\new projects\affiliate-platform\clean\_logs\2026-10-10T15_55_39_178Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+13 silly logfile done cleaning log files
+14 silly idealTree buildDeps
+15 silly fetch manifest nodemailer@*
+16 silly packumentCache full:https://registry.npmjs.org/nodemailer cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/nodemailer 659ms (cache updated)
+18 silly packumentCache full:https://registry.npmjs.org/nodemailer set size:undefined disposed:false
+19 silly placeDep ROOT nodemailer@10.1.0 OK for:  want: *
+20 silly fetch manifest nodemailer@^7.0.7
+21 silly packumentCache full:https://registry.npmjs.org/nodemailer cache-miss
+22 http cache https://registry.npmjs.org/nodemailer 13ms (cache hit)
+23 silly packumentCache full:https://registry.npmjs.org/nodemailer set size:716305 disposed:false
+24 silly placeDep ROOT nodemailer@7.0.13 REPLACE for: next-auth@4.24.15 want: ^7.0.7
+25 silly reify moves {}
+26 silly audit bulk request {
+26 silly audit   '@alloc/quick-lru': [ '5.3.0' ],
+26 silly audit   '@babel/runtime': [ '7.29.7' ],
+26 silly audit   '@cspotcode/source-map-support': [ '0.8.1' ],
+26 silly audit   '@jridgewell/trace-mapping': [ '0.3.9', '0.3.31' ],
+26 silly audit   '@effect/platform': [ '0.90.3' ],
+26 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+26 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+26 silly audit   '@jridgewell/sourcemap-codec': [ '1.6.0' ],
+26 silly audit   '@msgpackr-extract/msgpackr-extract-darwin-arm64': [ '3.0.4' ],
+26 silly audit   '@msgpackr-extract/msgpackr-extract-darwin-x64': [ '3.0.4' ],
+26 silly audit   '@msgpackr-extract/msgpackr-extract-linux-arm': [ '3.0.4' ],
+26 silly audit   '@msgpackr-extract/msgpackr-extract-linux-arm64': [ '3.0.4' ],
+26 silly audit   '@msgpackr-extract/msgpackr-extract-linux-x64': [ '3.0.4' ],
+26 silly audit   '@msgpackr-extract/msgpackr-extract-win32-x64': [ '3.0.4' ],
+26 silly audit   '@neon/config': [ '1.8.2' ],
+26 silly audit   jiti: [ '2.7.0', '1.21.7' ],
+26 silly audit   zod: [ '4.6.5', '3.25.76' ],
+26 silly audit   '@neon/sdk': [ '6.1.2' ],
+26 silly audit   '@next/env': [ '14.2.15' ],
+26 silly audit   '@next/swc-darwin-arm64': [ '14.2.15' ],
+26 silly audit   '@next/swc-darwin-x64': [ '14.2.15' ],
+26 silly audit   '@next/swc-linux-arm64-gnu': [ '14.2.15' ],
+26 silly audit   '@next/swc-linux-arm64-musl': [ '14.2.15' ],
+26 silly audit   '@next/swc-linux-x64-gnu': [ '14.2.15' ],
+26 silly audit   '@next/swc-linux-x64-musl': [ '14.2.15' ],
+26 silly audit   '@next/swc-win32-arm64-msvc': [ '14.2.15' ],
+26 silly audit   '@next/swc-win32-ia32-msvc': [ '14.2.15' ],
+26 silly audit   '@next/swc-win32-x64-msvc': [ '14.2.15' ],
+26 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+26 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+26 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+26 silly audit   '@opentelemetry/semantic-conventions': [ '1.43.0' ],
+26 silly audit   '@panva/hkdf': [ '1.2.1' ],
+26 silly audit   '@prisma/client': [ '5.22.0' ],
+26 silly audit   '@prisma/debug': [ '5.22.0' ],
+26 silly audit   '@prisma/engines': [ '5.22.0' ],
+26 silly audit   '@prisma/engines-version': [ '5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2' ],
+26 silly audit   '@prisma/fetch-engine': [ '5.22.0' ],
+26 silly audit   '@prisma/get-platform': [ '5.22.0' ],
+26 silly audit   '@stablelib/base64': [ '1.0.1' ],
+26 silly audit   '@standard-schema/spec': [ '1.1.0', '1.0.0-beta.4' ],
+26 silly audit   '@swc/counter': [ '0.1.3' ],
+26 silly audit   '@swc/helpers': [ '0.5.5' ],
+26 silly audit   '@tsconfig/node10': [ '1.0.13' ],
+26 silly audit   '@tsconfig/node12': [ '1.0.11' ],
+26 silly audit   '@tsconfig/node14': [ '1.0.3' ],
+26 silly audit   '@tsconfig/node16': [ '1.0.4' ],
+26 silly audit   '@types/bcryptjs': [ '2.4.6' ],
+26 silly audit   '@types/node': [ '20.19.43' ],
+26 silly audit   '@types/prop-types': [ '15.7.15' ],
+26 silly audit   '@types/react': [ '18.3.31' ],
+26 silly audit   '@uploadthing/mime-types': [ '0.3.6' ],
+26 silly audit   '@uploadthing/react': [ '7.3.3' ],
+26 silly audit   '@uploadthing/shared': [ '7.1.10' ],
+26 silly audit   acorn: [ '8.18.0' ],
+26 silly audit   'acorn-walk': [ '8.3.5' ],
+26 silly audit   'any-promise': [ '1.3.0' ],
+26 silly audit   anymatch: [ '3.1.3' ],
+26 silly audit   arg: [ '5.0.2', '4.1.3' ],
+26 silly audit   autoprefixer: [ '10.6.1' ],
+26 silly audit   'baseline-browser-mapping': [ '2.11.26' ],
+26 silly audit   bcryptjs: [ '2.4.3' ],
+26 silly audit   'binary-extensions': [ '2.3.0' ],
+26 silly audit   braces: [ '3.0.3' ],
+26 silly audit   browserslist: [ '4.29.1' ],
+26 silly audit   busboy: [ '1.6.0' ],
+26 silly audit   'camelcase-css': [ '2.0.1' ],
+26 silly audit   'caniuse-lite': [ '1.0.30001812' ],
+26 silly audit   chokidar: [ '3.6.0' ],
+26 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+26 silly audit   'client-only': [ '0.0.1' ],
+26 silly audit   commander: [ '4.1.1' ],
+26 silly audit   cookie: [ '0.7.2' ],
+26 silly audit   'create-require': [ '1.1.1' ],
+26 silly audit   cssesc: [ '3.0.0' ],
+26 silly audit   csstype: [ '3.2.3' ],
+26 silly audit   'detect-libc': [ '2.1.2' ],
+26 silly audit   didyoumean: [ '1.2.2' ],
+26 silly audit   diff: [ '4.0.4' ],
+26 silly audit   dlv: [ '1.1.3' ],
+26 silly audit   effect: [ '3.17.7' ],
+26 silly audit   'electron-to-chromium': [ '1.5.439' ],
+26 silly audit   'es-errors': [ '1.3.0' ],
+26 silly audit   escalade: [ '3.2.0' ],
+26 silly audit   'fast-check': [ '3.23.2' ],
+26 silly audit   'fast-glob': [ '3.3.3' ],
+26 silly audit   'fast-sha256': [ '1.3.0' ],
+26 silly audit   fastq: [ '1.20.3' ],
+26 silly audit   'file-selector': [ '0.6.0' ],
+26 silly audit   'fill-range': [ '7.1.1' ],
+26 silly audit   'find-my-way-ts': [ '0.1.6' ],
+26 silly audit   'fraction.js': [ '5.3.4' ],
+26 silly audit   fsevents: [ '2.3.3' ],
+26 silly audit   'function-bind': [ '1.1.2' ],
+26 silly audit   'graceful-fs': [ '4.2.11' ],
+26 silly audit   hasown: [ '2.0.4' ],
+26 silly audit   'is-binary-path': [ '2.1.0' ],
+26 silly audit   'is-core-module': [ '2.17.0' ],
+26 silly audit   'is-extglob': [ '2.1.1' ],
+26 silly audit   'is-glob': [ '4.0.3' ],
+26 silly audit   'is-number': [ '7.0.0' ],
+26 silly audit   jose: [ '4.15.9' ],
+26 silly audit   'js-tokens': [ '4.0.0' ],
+26 silly audit   lilconfig: [ '3.1.3' ],
+26 silly audit   'lines-and-columns': [ '1.2.4' ],
+26 silly audit   'loose-envify': [ '1.4.0' ],
+26 silly audit   'lru-cache': [ '6.0.0' ],
+26 silly audit   'lucide-react': [ '1.48.0' ],
+26 silly audit   'make-error': [ '1.3.6' ],
+26 silly audit   merge2: [ '1.4.1' ],
+26 silly audit   micromatch: [ '4.0.8' ],
+26 silly audit   msgpackr: [ '1.12.1' ],
+26 silly audit   'msgpackr-extract': [ '3.0.4' ],
+26 silly audit   multipasta: [ '0.2.8' ],
+26 silly audit   mz: [ '2.7.0' ],
+26 silly audit   nanoid: [ '3.3.19' ],
+26 silly audit   next: [ '14.2.15' ],
+26 silly audit   'next-auth': [ '4.24.15' ],
+26 silly audit   postcss: [ '8.4.31', '8.5.28' ],
+26 silly audit   'node-gyp-build-optional-packages': [ '5.2.2' ],
+26 silly audit   'node-releases': [ '2.0.57' ],
+26 silly audit   'normalize-path': [ '3.0.0' ],
+26 silly audit   oauth: [ '0.9.15' ],
+26 silly audit   'object-assign': [ '4.1.1' ],
+26 silly audit   'object-hash': [ '2.2.0', '3.0.0' ],
+26 silly audit   'oidc-token-hash': [ '5.2.0' ],
+26 silly audit   'openid-client': [ '5.7.1' ],
+26 silly audit   'path-parse': [ '1.0.7' ],
+26 silly audit   picocolors: [ '1.1.1' ],
+26 silly audit   picomatch: [ '2.3.2', '4.0.7' ],
+26 silly audit   pirates: [ '4.0.7' ],
+26 silly audit   'postal-mime': [ '2.7.6' ],
+26 silly audit   'postcss-import': [ '15.1.0' ],
+26 silly audit   'postcss-js': [ '4.1.0' ],
+26 silly audit   'postcss-load-config': [ '6.0.1' ],
+26 silly audit   'postcss-nested': [ '6.2.0' ],
+26 silly audit   'postcss-selector-parser': [ '6.1.4' ],
+26 silly audit   'postcss-value-parser': [ '4.2.0' ],
+26 silly audit   preact: [ '10.29.8' ],
+26 silly audit   'preact-render-to-string': [ '5.2.6' ],
+26 silly audit   'pretty-format': [ '3.8.0' ],
+26 silly audit   prisma: [ '5.22.0' ],
+26 silly audit   'pure-rand': [ '6.1.0' ],
+26 silly audit   'queue-microtask': [ '1.2.3' ],
+26 silly audit   react: [ '18.3.1' ],
+26 silly audit   'react-dom': [ '18.3.1' ],
+26 silly audit   'read-cache': [ '1.0.2' ],
+26 silly audit   readdirp: [ '3.6.0' ],
+26 silly audit   resend: [ '6.32.1' ],
+26 silly audit   resolve: [ '1.22.12' ],
+26 silly audit   reusify: [ '1.1.0' ],
+26 silly audit   'run-parallel': [ '1.2.0' ],
+26 silly audit   scheduler: [ '0.23.2' ],
+26 silly audit   'source-map-js': [ '1.2.1' ],
+26 silly audit   sqids: [ '0.3.0' ],
+26 silly audit   standardwebhooks: [ '1.1.1' ],
+26 silly audit   streamsearch: [ '1.1.0' ],
+26 silly audit   'styled-jsx': [ '5.1.1' ],
+26 silly audit   sucrase: [ '3.35.1' ],
+26 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+26 silly audit   tailwindcss: [ '3.4.19' ],
+26 silly audit   thenify: [ '3.3.1' ],
+26 silly audit   'thenify-all': [ '1.6.0' ],
+26 silly audit   tinyglobby: [ '0.2.17' ],
+26 silly audit   fdir: [ '6.5.0' ],
+26 silly audit   'to-regex-range': [ '5.0.1' ],
+26 silly audit   'ts-interface-checker': [ '0.1.13' ],
+26 silly audit   'ts-node': [ '10.9.2' ],
+26 silly audit   tslib: [ '2.8.1' ],
+26 silly audit   typescript: [ '5.9.3' ],
+26 silly audit   'undici-types': [ '6.21.0' ],
+26 silly audit   'update-browserslist-db': [ '1.3.3' ],
+26 silly audit   uploadthing: [ '7.7.4' ],
+26 silly audit   'util-deprecate': [ '1.0.2' ],
+26 silly audit   uuid: [ '11.1.1' ],
+26 silly audit   'v8-compile-cache-lib': [ '3.0.1' ],
+26 silly audit   yallist: [ '4.0.0' ],
+26 silly audit   yn: [ '3.1.1' ],
+26 silly audit   nodemailer: [ '7.0.13' ]
+26 silly audit }
+27 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\fsevents
+28 silly reify mark deleted [ 'D:\\new projects\\affiliate-platform\\node_modules\\fsevents' ]
+29 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-win32-ia32-msvc
+30 silly reify mark deleted [
+30 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-win32-ia32-msvc'
+30 silly reify ]
+31 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-win32-arm64-msvc
+32 silly reify mark deleted [
+32 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-win32-arm64-msvc'
+32 silly reify ]
+33 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-linux-x64-musl
+34 silly reify mark deleted [
+34 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-linux-x64-musl'
+34 silly reify ]
+35 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-linux-x64-gnu
+36 silly reify mark deleted [
+36 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-linux-x64-gnu'
+36 silly reify ]
+37 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-linux-arm64-musl
+38 silly reify mark deleted [
+38 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-linux-arm64-musl'
+38 silly reify ]
+39 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-linux-arm64-gnu
+40 silly reify mark deleted [
+40 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-linux-arm64-gnu'
+40 silly reify ]
+41 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-darwin-x64
+42 silly reify mark deleted [
+42 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-darwin-x64'
+42 silly reify ]
+43 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@next\swc-darwin-arm64
+44 silly reify mark deleted [
+44 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@next\\swc-darwin-arm64'
+44 silly reify ]
+45 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@msgpackr-extract\msgpackr-extract-linux-x64
+46 silly reify mark deleted [
+46 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@msgpackr-extract\\msgpackr-extract-linux-x64'
+46 silly reify ]
+47 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@msgpackr-extract\msgpackr-extract-linux-arm64
+48 silly reify mark deleted [
+48 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@msgpackr-extract\\msgpackr-extract-linux-arm64'
+48 silly reify ]
+49 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@msgpackr-extract\msgpackr-extract-linux-arm
+50 silly reify mark deleted [
+50 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@msgpackr-extract\\msgpackr-extract-linux-arm'
+50 silly reify ]
+51 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@msgpackr-extract\msgpackr-extract-darwin-x64
+52 silly reify mark deleted [
+52 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@msgpackr-extract\\msgpackr-extract-darwin-x64'
+52 silly reify ]
+53 verbose reify failed optional dependency D:\new projects\affiliate-platform\node_modules\@msgpackr-extract\msgpackr-extract-darwin-arm64
+54 silly reify mark deleted [
+54 silly reify   'D:\\new projects\\affiliate-platform\\node_modules\\@msgpackr-extract\\msgpackr-extract-darwin-arm64'
+54 silly reify ]
+55 http cache nodemailer@https://registry.npmjs.org/nodemailer/-/nodemailer-7.0.13.tgz 0ms (cache hit)
+56 silly tarball no local data for nodemailer@https://registry.npmjs.org/nodemailer/-/nodemailer-7.0.13.tgz. Extracting by manifest.
+57 http fetch GET 200 https://registry.npmjs.org/nodemailer/-/nodemailer-7.0.13.tgz 261ms (cache miss)
+58 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 339ms
+59 silly audit report {
+59 silly audit report   braces: [
+59 silly audit report     {
+59 silly audit report       id: 1240992,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-vfj7-8cjw-p6xm',
+59 silly audit report       title: 'braces vulnerable to stack-exhaustion denial of service through deeply nested patterns',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<=3.0.3',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ],
+59 silly audit report   effect: [
+59 silly audit report     {
+59 silly audit report       id: 1115356,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-38f7-945m-qr2g',
+59 silly audit report       title: 'Effect `AsyncLocalStorage` context lost/contaminated inside Effect fibers under concurrent load with RPC',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<3.20.0',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ],
+59 silly audit report   next: [
+59 silly audit report     {
+59 silly audit report       id: 1117931,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-8h8q-6873-q5fj',
+59 silly audit report       title: 'Next.js Vulnerable to Denial of Service with Server Components',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1101438,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-7m27-7ghc-44w9',
+59 silly audit report       title: 'Next.js Allows a Denial of Service (DoS) with Server Actions',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=14.0.0 <14.2.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1105461,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-3h52-269p-cp9r',
+59 silly audit report       title: 'Information exposure in Next.js dev server due to lack of origin verification',
+59 silly audit report       severity: 'low',
+59 silly audit report       vulnerable_versions: '>=13.0 <14.2.30',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1111391,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-mwv6-3258-q52c',
+59 silly audit report       title: 'Next Vulnerable to Denial of Service with Server Components',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.3.0 <14.2.34',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1107226,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-g5qg-72qw-gw5v',
+59 silly audit report       title: 'Next.js Affected by Cache Key Confusion for Image Optimization API Routes',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.31',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1107512,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-4342-x723-ch2f',
+59 silly audit report       title: 'Next.js Improper Middleware Redirect Handling Leads to SSRF',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.32',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1107513,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-xv57-4mr9-wg8v',
+59 silly audit report       title: 'Next.js Content Injection Vulnerability for Image Optimization',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.31',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1112182,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-5j59-xgg2-r9c4',
+59 silly audit report       title: 'Next has a Denial of Service with Server Components - Incomplete Fix Follow-Up',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.3.1-canary.0 <14.2.35',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1108291,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-qpjv-v59x-3qc4',
+59 silly audit report       title: 'Next.js Race Condition to Cache Poisoning',
+59 silly audit report       severity: 'low',
+59 silly audit report       vulnerable_versions: '>=0.9.9 <14.2.24',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118942,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-3g8h-86w9-wvmq',
+59 silly audit report       title: "Next.js's Middleware / Proxy redirects can be cache-poisoned",
+59 silly audit report       severity: 'low',
+59 silly audit report       vulnerable_versions: '>=12.2.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118944,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-ffhc-5mcf-pf4q',
+59 silly audit report       title: 'Next.js vulnerable to cross-site scripting in App Router applications using CSP nonces',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=13.4.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118946,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-vfv6-92ff-j949',
+59 silly audit report       title: 'Next.js vulnerable to cache poisoning via collisions in React Server Component cache-busting',
+59 silly audit report       severity: 'low',
+59 silly audit report       vulnerable_versions: '>=13.4.6 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118948,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-gx5p-jg67-6x7h',
+59 silly audit report       title: 'Next.js has cross-site scripting in beforeInteractive scripts with untrusted input',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118952,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-h64f-5h5j-jqjh',
+59 silly audit report       title: 'Next.js has a Denial of Service in the Image Optimization API',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=10.0.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118954,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-c4j6-fc7j-m34r',
+59 silly audit report       title: 'Next.js vulnerable to server-side request forgery in applications using WebSocket upgrades',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.4.13 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118958,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-wfc6-r584-vfw7',
+59 silly audit report       title: 'Next.js vulnerable to cache poisoning in React Server Component responses',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=14.2.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1118962,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-36qx-fr4f-26g5',
+59 silly audit report       title: 'Next.js has a Middleware / Proxy bypass in Pages Router applications using i18n',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=12.2.0 <15.5.16',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1112593,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-9g9p-9gw9-jx7f',
+59 silly audit report       title: 'Next.js self-hosted applications vulnerable to DoS via Image Optimizer remotePatterns configuration',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=10.0.0 <15.5.10',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1112653,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-h25m-26qc-wcjf',
+59 silly audit report       title: 'Next.js HTTP request deserialization can lead to DoS when using insecure React Server Components',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.0.8',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1113689,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-f82v-jwr5-mffw',
+59 silly audit report       title: 'Authorization Bypass in Next.js Middleware',
+59 silly audit report       severity: 'critical',
+59 silly audit report       vulnerable_versions: '>=14.0.0 <14.2.25',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1114897,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-ggv3-7p47-pfv8',
+59 silly audit report       title: 'Next.js: HTTP request smuggling in rewrites',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=9.5.0 <15.5.13',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1114940,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-3x4c-7xq6-9pq8',
+59 silly audit report       title: 'Next.js: Unbounded next/image disk cache growth can exhaust storage',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=10.0.0 <15.5.14',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1116376,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-q4gf-8mx6-v5v3',
+59 silly audit report       title: 'Next.js has a Denial of Service with Server Components',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.15',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124185,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-89xv-2m56-2m9x',
+59 silly audit report       title: 'Next.js: Server-Side Request Forgery in Server Actions on custom servers',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=14.1.1 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124172,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-m99w-x7hq-7vfj',
+59 silly audit report       title: 'Next.js: Denial of Service in App Router using Server Actions',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124187,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-68g3-v927-f742',
+59 silly audit report       title: 'Next.js: Cache confusion of response bodies for requests with bodies',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124189,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-4633-3j49-mh5q',
+59 silly audit report       title: 'Next.js: Cache confusion of response bodies for requests with bodies containing invalid UTF-8 byte sequences',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124191,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-4c39-4ccg-62r3',
+59 silly audit report       title: 'Next.js: Unbounded Server Action payload in Edge runtime',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124193,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-p9j2-gv94-2wf4',
+59 silly audit report       title: 'Next.js: Server-Side Request Forgery in rewrites via attacker-controlled destination hostname',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=12.0.0 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124197,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-955p-x3mx-jcvp',
+59 silly audit report       title: 'Next.js: Unauthenticated disclosure of internal Server Function endpoints',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=13.0.0 <15.5.21',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1193677,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-p293-qw3h-jr36',
+59 silly audit report       title: 'Next.js: Unauthenticated Remote Code Execution on windows-hosted servers',
+59 silly audit report       severity: 'critical',
+59 silly audit report       vulnerable_versions: '>=13.4.0 <15.5.24',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1193733,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-2xp9-vwfh-vxw4',
+59 silly audit report       title: 'Next.js: Unauthenticated Remote Code Execution in Image Optimization API when AVIF files are used',
+59 silly audit report       severity: 'critical',
+59 silly audit report       vulnerable_versions: '>=10.0.0 <15.5.24',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ],
+59 silly audit report   postcss: [
+59 silly audit report     {
+59 silly audit report       id: 1130709,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-fxqj-rqcc-2cmp',
+59 silly audit report       title: 'PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<=8.5.22',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1117015,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-qx2v-qp2m-jg93',
+59 silly audit report       title: 'PostCSS has XSS via Unescaped </style> in its CSS Stringify Output',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<8.5.10',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1124252,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-6g55-p6wh-862q',
+59 silly audit report       title: 'PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<=8.5.11',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1139510,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-r28c-9q8g-f849',
+59 silly audit report       title: 'PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<=8.5.17',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ],
+59 silly audit report   'postcss-selector-parser': [
+59 silly audit report     {
+59 silly audit report       id: 1241232,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-rj75-hqrm-r3gf',
+59 silly audit report       title: 'PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<7.1.6',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ],
+59 silly audit report   'source-map-js': [
+59 silly audit report     {
+59 silly audit report       id: 1241209,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-68fv-2mgg-jv7q',
+59 silly audit report       title: 'source-map-js allows event-loop denial of service through indexed source-map section offsets',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '>=1.0.0 <1.2.2',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ],
+59 silly audit report   nodemailer: [
+59 silly audit report     {
+59 silly audit report       id: 1158513,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-p6gq-j5cr-w38f',
+59 silly audit report       title: 'Nodemailer: Message-level raw option bypasses disableFileAccess/disableUrlAccess, enabling arbitrary file read and full-response SSRF in the delivered message',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<=9.0.0',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1120795,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-268h-hp4c-crq3',
+59 silly audit report       title: 'Nodemailer: CRLF injection in Nodemailer List-* header comments allows arbitrary message header injection',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<=8.0.8',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1120796,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-wqvq-jvpq-h66f',
+59 silly audit report       title: 'Nodemailer jsonTransport bypasses disableFileAccess and disableUrlAccess during message normalization',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<=8.0.8',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1115470,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-c7w3-x93f-qmm8',
+59 silly audit report       title: 'Nodemailer has SMTP command injection due to unsanitized `envelope.size` parameter',
+59 silly audit report       severity: 'low',
+59 silly audit report       vulnerable_versions: '<8.0.4',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1116270,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-vvjj-xcjg-gr5g',
+59 silly audit report       title: 'Nodemailer Vulnerable to SMTP Command Injection via CRLF in Transport name Option (EHLO/HELO) ',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<=8.0.4',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1193741,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-8m3c-c648-2xjj',
+59 silly audit report       title: 'Nodemailer: resolveContent() on a MailMessage bypasses disableFileAccess/disableUrlAccess when called with the legacy signature',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<=9.1.0',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1193770,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-wmmp-3585-3rmp',
+59 silly audit report       title: 'Nodemailer: IDN/Punycode domain allow-list bypass leads to email delivery to an attacker-controlled domain',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<9.1.0',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1193778,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-2x7j-588g-ccc2',
+59 silly audit report       title: 'Nodemailer: Quadratic (O(n²)) time complexity in addressparser allows remote denial of service via a crafted address list',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<9.1.0',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1193779,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-cc9r-2j5m-2m83',
+59 silly audit report       title: 'Nodemailer: Recipient-domain validation bypass via RFC 5322 comment mis-parsing leads to email delivery to an attacker-controlled domain',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=6.9.16 <9.1.0',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1241195,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-r7g4-qg5f-qqm2',
+59 silly audit report       title: 'Nodemailer: Improper TLS Certificate Validation in OAuth2 Token Fetch Enables Credential Interception',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<=8.0.7',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1240114,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-v53p-9fqp-m79j',
+59 silly audit report       title: 'Nodemailer: Quadratic backtracking in the addressparser free-text fallback allows remote denial of service',
+59 silly audit report       severity: 'high',
+59 silly audit report       vulnerable_versions: '<=10.0.5',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1239931,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-6vj9-mwq6-2f5v',
+59 silly audit report       title: 'Nodemailer: Process-global DNS cache reuses TLS `servername` across transports, enabling cross-tenant SMTP credential disclosure',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '>=5.0.0 <10.0.2',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     },
+59 silly audit report     {
+59 silly audit report       id: 1240033,
+59 silly audit report       url: 'https://github.com/advisories/GHSA-8vvx-rff5-p5rq',
+59 silly audit report       title: 'Nodemailer: Nested structured recipient arrays bypass the parser depth limit and cause stack exhaustion DoS',
+59 silly audit report       severity: 'moderate',
+59 silly audit report       vulnerable_versions: '<10.0.2',
+59 silly audit report       cwe: [Array],
+59 silly audit report       cvss: [Object]
+59 silly audit report     }
+59 silly audit report   ]
+59 silly audit report }
+60 silly packumentCache corgi:https://registry.npmjs.org/braces cache-miss
+61 silly packumentCache corgi:https://registry.npmjs.org/effect cache-miss
+62 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+63 silly packumentCache corgi:https://registry.npmjs.org/postcss cache-miss
+64 silly packumentCache corgi:https://registry.npmjs.org/postcss-selector-parser cache-miss
+65 silly packumentCache corgi:https://registry.npmjs.org/source-map-js cache-miss
+66 silly packumentCache corgi:https://registry.npmjs.org/nodemailer cache-miss
+67 http fetch GET 200 https://registry.npmjs.org/effect 162ms (cache revalidated)
+68 silly packumentCache corgi:https://registry.npmjs.org/effect set size:411473 disposed:false
+69 http fetch GET 200 https://registry.npmjs.org/next 235ms (cache revalidated)
+70 silly packumentCache corgi:https://registry.npmjs.org/next set size:25634673 disposed:false
+71 http fetch GET 200 https://registry.npmjs.org/braces 2383ms (cache revalidated)
+72 silly packumentCache corgi:https://registry.npmjs.org/braces set size:35919 disposed:false
+73 http fetch GET 200 https://registry.npmjs.org/postcss 2381ms (cache revalidated)
+74 silly packumentCache corgi:https://registry.npmjs.org/postcss set size:358671 disposed:false
+75 http fetch GET 200 https://registry.npmjs.org/source-map-js 2408ms (cache revalidated)
+76 silly packumentCache corgi:https://registry.npmjs.org/source-map-js set size:8534 disposed:false
+77 http fetch GET 200 https://registry.npmjs.org/nodemailer 2466ms (cache miss)
+78 silly packumentCache corgi:https://registry.npmjs.org/nodemailer set size:undefined disposed:false
+79 http fetch GET 200 https://registry.npmjs.org/postcss-selector-parser 2689ms (cache revalidated)
+80 silly packumentCache corgi:https://registry.npmjs.org/postcss-selector-parser set size:90399 disposed:false
+81 silly packumentCache corgi:https://registry.npmjs.org/chokidar cache-miss
+82 silly packumentCache corgi:https://registry.npmjs.org/micromatch cache-miss
+83 http fetch GET 200 https://registry.npmjs.org/chokidar 40ms (cache revalidated)
+84 silly packumentCache corgi:https://registry.npmjs.org/chokidar set size:119454 disposed:false
+85 http fetch GET 200 https://registry.npmjs.org/micromatch 43ms (cache revalidated)
+86 silly packumentCache corgi:https://registry.npmjs.org/micromatch set size:71776 disposed:false
+87 silly packumentCache corgi:https://registry.npmjs.org/@effect%2fplatform cache-miss
+88 silly packumentCache corgi:https://registry.npmjs.org/@uploadthing%2fshared cache-miss
+89 silly packumentCache corgi:https://registry.npmjs.org/uploadthing cache-miss
+90 http fetch GET 200 https://registry.npmjs.org/uploadthing 372ms (cache revalidated)
+91 silly packumentCache corgi:https://registry.npmjs.org/uploadthing set size:355903 disposed:false
+92 http fetch GET 200 https://registry.npmjs.org/@uploadthing%2fshared 796ms (cache revalidated)
+93 silly packumentCache corgi:https://registry.npmjs.org/@uploadthing%2fshared set size:195330 disposed:false
+94 http fetch GET 200 https://registry.npmjs.org/@effect%2fplatform 806ms (cache revalidated)
+95 silly packumentCache corgi:https://registry.npmjs.org/@effect%2fplatform set size:424546 disposed:false
+96 silly packumentCache corgi:https://registry.npmjs.org/@uploadthing%2freact cache-miss
+97 silly packumentCache corgi:https://registry.npmjs.org/next-auth cache-miss
+98 http fetch GET 200 https://registry.npmjs.org/next-auth 736ms (cache revalidated)
+99 silly packumentCache corgi:https://registry.npmjs.org/next-auth set size:1817421 disposed:false
+100 http fetch GET 200 https://registry.npmjs.org/@uploadthing%2freact 1011ms (cache revalidated)
+101 silly packumentCache corgi:https://registry.npmjs.org/@uploadthing%2freact set size:348376 disposed:false
+102 silly packumentCache corgi:https://registry.npmjs.org/postcss-nested cache-miss
+103 silly packumentCache corgi:https://registry.npmjs.org/tailwindcss cache-miss
+104 http fetch GET 200 https://registry.npmjs.org/postcss-nested 42ms (cache revalidated)
+105 silly packumentCache corgi:https://registry.npmjs.org/postcss-nested set size:43577 disposed:false
+106 http fetch GET 200 https://registry.npmjs.org/tailwindcss 528ms (cache revalidated)
+107 silly packumentCache corgi:https://registry.npmjs.org/tailwindcss set size:4808509 disposed:false
+108 silly packumentCache corgi:https://registry.npmjs.org/fast-glob cache-miss
+109 http fetch GET 200 https://registry.npmjs.org/fast-glob 63ms (cache revalidated)
+110 silly packumentCache corgi:https://registry.npmjs.org/fast-glob set size:86036 disposed:false
+111 silly ADD node_modules/nodemailer
+112 silly ADD
+113 silly ADD
+114 silly ADD
+115 silly ADD
+116 silly ADD
+117 silly ADD
+118 silly ADD
+119 silly ADD
+120 silly ADD
+121 silly ADD
+122 silly ADD
+123 silly ADD
+124 silly ADD
+125 silly ADD
+126 verbose cwd D:\new projects\affiliate-platform
+127 verbose os Windows_NT 10.0.26300
+128 verbose node v22.20.0
+129 verbose npm  v10.9.3
+130 verbose exit 0
+131 info ok
