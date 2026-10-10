@@ -1,5 +1,6 @@
 import crypto from "crypto";
 import { prisma } from "./db";
+import { buildAffiliateUrl } from "./build-affiliate-url";
 
 const IP_SALT = process.env.CLICK_IP_SALT || "change-me-in-env";
 
@@ -24,7 +25,8 @@ export async function logClickAndGetRedirect(input: LogClickInput) {
 
   if (!offer || !offer.merchant.isActive) return null;
 
-  await prisma.clickEvent.create({
+  // 1. Log the click and get the unique click ID
+  const clickEvent = await prisma.clickEvent.create({
     data: {
       offerId: offer.id,
       ipHash: hashIp(input.ip),
@@ -34,8 +36,10 @@ export async function logClickAndGetRedirect(input: LogClickInput) {
     },
   });
 
-  // affiliateUrl is the pre-built, tagged URL (built at ingestion time with
-  // this merchant's affiliate id) — never expose the raw deepLink or your
-  // affiliate tag directly in client-rendered HTML/JS.
-  return offer.affiliateUrl;
+  // 2. We dynamically build the final redirect URL at click-time instead of ingestion-time.
+  // This allows us to inject the specific `clickEvent.id` into the URL as the Sub-ID.
+  // This Sub-ID will be tracked by the merchant and sent back to our /api/postback webhook when a sale occurs!
+  const dynamicTrackingUrl = buildAffiliateUrl(offer.merchant, offer.deepLink, clickEvent.id);
+
+  return dynamicTrackingUrl;
 }

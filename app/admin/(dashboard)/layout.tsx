@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LogoutButton from "@/components/LogoutButton";
-import { Package, Store, Tag, ListTree, Users } from "lucide-react";
+import { Package, Store, Tag, ListTree, Users, TrendingUp } from "lucide-react";
 
 export default function AdminLayout({
   children,
@@ -29,7 +29,11 @@ export default function AdminLayout({
               <Tag className="w-4 h-4 text-gray-500" />
               Global Offers
             </Link>
-            <Link href="/admin/subscribers" className="flex items-center gap-3 text-sm font-medium text-gray-700 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors mt-4">
+            <Link href="/admin/conversions" className="flex items-center gap-3 text-sm font-medium text-gray-700 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors mt-4">
+              <TrendingUp className="w-4 h-4 text-gray-500" />
+              Sales & Conversions
+            </Link>
+            <Link href="/admin/subscribers" className="flex items-center gap-3 text-sm font-medium text-gray-700 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors">
               <Users className="w-4 h-4 text-gray-500" />
               Subscribers
             </Link>
