@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db";
 import ProductCard from "@/components/ProductCard";
 import { getCategoryIcon } from "@/components/CategoryIcon";
 import HeroSearch from "@/components/HeroSearch";
+import DealAlertForm from "@/components/DealAlertForm";
 import { Zap, ShieldCheck, TrendingUp, BellRing, ChevronRight } from "lucide-react";
 
 export const revalidate = 1800;
@@ -154,21 +155,9 @@ export default async function HomePage() {
               Join thousands of smart shoppers. Get notified instantly when the products you want drop to your target price.
             </p>
 
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-5 py-3.5 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-colors shadow-lg"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="text-xs text-gray-500 mt-4">We respect your privacy. No spam, ever.</p>
+            <DealAlertForm />
+
+            <p className="text-xs text-gray-500 mt-6">We respect your privacy. No spam, ever.</p>
           </div>
         </section>
 
