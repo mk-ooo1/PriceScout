@@ -61,10 +61,11 @@ export default function OffersManager({
     setAdding(true);
     setError(null);
 
-    const res = await fetch(`/api/admin/products/${productId}/offers`, {
+    const res = await fetch(`/api/admin/offers`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        productId,
         merchantId,
         price: Number(price),
         mrp: mrp ? Number(mrp) : undefined,
@@ -77,6 +78,7 @@ export default function OffersManager({
 
     if (!res.ok) {
       const data = await res.json().catch(() => ({}));
+      console.error("Add offer failed:", data);
       setError(data.error ? JSON.stringify(data.error) : "Failed to add offer.");
       return;
     }
