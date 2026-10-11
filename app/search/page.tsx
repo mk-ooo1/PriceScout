@@ -12,28 +12,30 @@ export default async function SearchPage({
 }) {
   const query = searchParams.q ?? "";
 
-  const products = query
-    ? await prisma.product.findMany({
-        where: {
-          isPublished: true,
-          OR: [
-            { title: { contains: query, mode: "insensitive" } },
-            { brand: { contains: query, mode: "insensitive" } },
-          ],
-        },
-        include: {
-          images: { take: 1, orderBy: { position: "asc" } },
-          offers: { orderBy: { price: "asc" } },
-        },
-        orderBy: { updatedAt: "desc" },
-      })
-    : [];
+  const products = await prisma.product.findMany({
+    where: {
+      isPublished: true,
+      ...(query
+        ? {
+            OR: [
+              { title: { contains: query, mode: "insensitive" } },
+              { brand: { contains: query, mode: "insensitive" } },
+            ],
+          }
+        : {}),
+    },
+    include: {
+      images: { take: 1, orderBy: { position: "asc" } },
+      offers: { orderBy: { price: "asc" } },
+    },
+    orderBy: { updatedAt: "desc" },
+  });
 
   return (
     <main className="mx-auto max-w-7xl px-4 py-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">
-          Search Results for &quot;{query}&quot;
+          {query ? `Search Results for "${query}"` : "All Products"}
         </h1>
         <p className="text-gray-500 mt-1">Found {products.length} products</p>
       </div>
