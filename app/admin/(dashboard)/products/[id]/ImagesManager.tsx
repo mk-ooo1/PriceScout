@@ -22,10 +22,14 @@ export default function ImagesManager({
     // res is an array of objects containing the file info
     for (const file of res) {
       // Save each uploaded image URL to our database
-      const dbRes = await fetch(`/api/admin/products/${productId}/images`, {
+      const dbRes = await fetch(`/api/admin/images`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: file.url, altText: file.name }),
+        body: JSON.stringify({
+          productId,
+          url: file.url,
+          altText: file.name
+        }),
       });
 
       if (dbRes.ok) {
@@ -39,7 +43,7 @@ export default function ImagesManager({
   const handleDelete = async (imageId: string) => {
     if (!confirm("Are you sure you want to delete this image?")) return;
     setDeletingId(imageId);
-    const res = await fetch(`/api/admin/products/${productId}/images/${imageId}`, {
+    const res = await fetch(`/api/admin/images?id=${imageId}`, {
       method: "DELETE",
     });
 
