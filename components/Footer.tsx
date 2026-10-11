@@ -36,8 +36,8 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4 tracking-wide uppercase text-sm">Quick Links</h4>
           <ul className="space-y-3 text-sm">
+            <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
             <li><Link href="/search" className="hover:text-white transition-colors">Search Products</Link></li>
-            <li><Link href="/admin/login" className="hover:text-white transition-colors">Admin Dashboard</Link></li>
           </ul>
         </div>
 
