@@ -3,6 +3,9 @@ import { z } from "zod";
 import { prisma } from "@/lib/db";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/admin/auth";
+import { UTApi } from "uploadthing/server";
+
+const utapi = new UTApi();
 
 const productSchema = z.object({
   title: z.string().min(3),
@@ -104,6 +107,34 @@ export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");
   if (!id) return NextResponse.json({ error: "Missing product id" }, { status: 400 });
 
+  // 1. Fetch the product's images so we can delete them from Uploadthing to free up quota
+  const product = await prisma.product.findUnique({
+    where: { id },
+    include: { images: true }
+  });
+
+  if (product && product.images.length > 0) {
+    const fileKeys = product.images.map((img) => {
+      try {
+        const urlObj = new URL(img.url);
+        return urlObj.pathname.split('/').pop();
+      } catch (e) {
+        return null;
+      }
+    }).filter(Boolean) as string[];
+
+    if (fileKeys.length > 0) {
+      try {
+        await utapi.deleteFiles(fileKeys);
+        console.log(`Deleted ${fileKeys.length} images from Uploadthing to save space`);
+      } catch (error) {
+        console.error("Failed to delete files from Uploadthing:", error);
+      }
+    }
+  }
+
+  // 2. Delete the product from the DB (this will cascade and delete the ProductImage records too)
   await prisma.product.delete({ where: { id } });
+
   return NextResponse.json({ ok: true });
 }
