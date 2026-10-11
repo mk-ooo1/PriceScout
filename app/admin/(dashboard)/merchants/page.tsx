@@ -29,6 +29,7 @@ export default async function AdminMerchantsPage() {
             <th className="p-3">Affiliate tag</th>
             <th className="p-3">Offers</th>
             <th className="p-3">Active</th>
+            <th className="p-3">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -44,6 +45,11 @@ export default async function AdminMerchantsPage() {
                 ) : (
                   <span className="text-gray-400">Disabled</span>
                 )}
+              </td>
+              <td className="p-3">
+                <Link href={`/admin/merchants/${m.id}`} className="text-blue-600 hover:underline">
+                  Edit
+                </Link>
               </td>
             </tr>
           ))}
