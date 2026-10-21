@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ settings }: { settings?: Record<string, string> }) {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 mt-20 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
@@ -38,6 +38,12 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li><Link href="/" className="hover:text-white transition-colors">Home</Link></li>
             <li><Link href="/search" className="hover:text-white transition-colors">Search Products</Link></li>
+            {settings?.whatsappUrl && (
+              <li><a href={settings.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">WhatsApp Community</a></li>
+            )}
+            {settings?.telegramUrl && (
+              <li><a href={settings.telegramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">Telegram Channel</a></li>
+            )}
           </ul>
         </div>
 
