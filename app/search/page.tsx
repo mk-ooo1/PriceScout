@@ -28,7 +28,10 @@ export default async function SearchPage({
       images: { take: 1, orderBy: { position: "asc" } },
       offers: { orderBy: { price: "asc" } },
     },
-    orderBy: { updatedAt: "desc" },
+    orderBy: [
+      { isPinned: "desc" },
+      { updatedAt: "desc" }
+    ],
   });
 
   return (

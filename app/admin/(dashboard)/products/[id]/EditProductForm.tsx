@@ -8,8 +8,9 @@ interface Product {
   title: string;
   brand: string;
   categoryId: string;
-  description: string;
+  description: string | null;
   isPublished: boolean;
+  isPinned: boolean;
 }
 
 export default function EditProductForm({
@@ -23,8 +24,9 @@ export default function EditProductForm({
   const [title, setTitle] = useState(product.title);
   const [brand, setBrand] = useState(product.brand);
   const [categoryId, setCategoryId] = useState(product.categoryId);
-  const [description, setDescription] = useState(product.description);
+  const [description, setDescription] = useState(product.description || "");
   const [isPublished, setIsPublished] = useState(product.isPublished);
+  const [isPinned, setIsPinned] = useState(product.isPinned);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [savedAt, setSavedAt] = useState<number | null>(null);
@@ -37,7 +39,7 @@ export default function EditProductForm({
     const res = await fetch(`/api/admin/products?id=${product.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, brand, categoryId, description, isPublished }),
+      body: JSON.stringify({ title, brand, categoryId, description, isPublished, isPinned }),
     });
 
     setSaving(false);
@@ -116,6 +118,15 @@ export default function EditProductForm({
           onChange={(e) => setIsPublished(e.target.checked)}
         />
         Published (visible on the public site)
+      </label>
+
+      <label className="flex items-center gap-2 text-sm">
+        <input
+          type="checkbox"
+          checked={isPinned}
+          onChange={(e) => setIsPinned(e.target.checked)}
+        />
+        Pinned (shows at the top of lists)
       </label>
 
       {error && <p className="text-red-500 text-sm">{error}</p>}

@@ -16,6 +16,7 @@ const productSchema = z.object({
   metaTitle: z.string().optional(),
   metaDescription: z.string().optional(),
   isPublished: z.boolean().optional(),
+  isPinned: z.boolean().optional(),
 });
 
 function slugify(title: string) {
@@ -76,6 +77,7 @@ const updateSchema = z.object({
   metaTitle: z.string().optional(),
   metaDescription: z.string().optional(),
   isPublished: z.boolean().optional(),
+  isPinned: z.boolean().optional(),
 });
 
 export async function PATCH(req: NextRequest) {

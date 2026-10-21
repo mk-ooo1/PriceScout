@@ -66,6 +66,7 @@ model Product {
   images        ProductImage[]
   offers        Offer[]
   isPublished   Boolean       @default(false)
+  isPinned      Boolean       @default(false)
   metaTitle     String?
   metaDescription String?
   createdAt     DateTime      @default(now())

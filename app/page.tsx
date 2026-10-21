@@ -17,7 +17,10 @@ export default async function HomePage() {
         images: { take: 1, orderBy: { position: "asc" } },
         offers: { orderBy: { price: "asc" } },
       },
-      orderBy: { updatedAt: "desc" },
+      orderBy: [
+        { isPinned: "desc" },
+        { updatedAt: "desc" }
+      ],
       take: 10,
     }),
   ]);

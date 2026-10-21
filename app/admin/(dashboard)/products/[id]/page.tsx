@@ -37,6 +37,7 @@ export default async function EditProductPage({
             categoryId: product.categoryId,
             description: product.description ?? "",
             isPublished: product.isPublished,
+            isPinned: product.isPinned,
           }}
           categories={categories.map((c) => ({ id: c.id, name: c.name }))}
         />

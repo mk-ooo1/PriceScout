@@ -44,6 +44,9 @@ export default async function AdminProductsPage() {
                 ) : (
                   <span className="text-gray-400">Draft</span>
                 )}
+                {p.isPinned && (
+                  <span className="ml-2 text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">Pinned</span>
+                )}
               </td>
               <td className="p-3">
                 <Link href={`/admin/products/${p.id}`} className="underline">

@@ -13,6 +13,8 @@ export default function NewProductForm({
   const [brand, setBrand] = useState("");
   const [categoryId, setCategoryId] = useState(categories[0]?.id ?? "");
   const [description, setDescription] = useState("");
+  const [isPublished, setIsPublished] = useState(false);
+  const [isPinned, setIsPinned] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
 
@@ -24,7 +26,7 @@ export default function NewProductForm({
     const res = await fetch("/api/admin/products", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ title, brand, categoryId, description }),
+      body: JSON.stringify({ title, brand, categoryId, description, isPublished, isPinned }),
     });
 
     setSaving(false);
@@ -87,6 +89,24 @@ export default function NewProductForm({
           className="w-full border rounded-md px-3 py-2"
         />
       </div>
+
+      <label className="flex items-center gap-2 text-sm">
+        <input
+          type="checkbox"
+          checked={isPublished}
+          onChange={(e) => setIsPublished(e.target.checked)}
+        />
+        Published (visible on the public site)
+      </label>
+
+      <label className="flex items-center gap-2 text-sm">
+        <input
+          type="checkbox"
+          checked={isPinned}
+          onChange={(e) => setIsPinned(e.target.checked)}
+        />
+        Pinned (shows at the top of lists)
+      </label>
 
       {error && <p className="text-red-500 text-sm">{error}</p>}
 

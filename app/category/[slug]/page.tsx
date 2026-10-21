@@ -17,7 +17,10 @@ async function getCategory(slug: string) {
           images: { take: 1, orderBy: { position: "asc" } },
           offers: { orderBy: { price: "asc" } },
         },
-        orderBy: { updatedAt: "desc" },
+        orderBy: [
+          { isPinned: "desc" },
+          { updatedAt: "desc" }
+        ],
       },
     },
   });
