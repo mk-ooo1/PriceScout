@@ -136,7 +136,7 @@ export default async function HomePage() {
             </div>
           )}
           <div className="mt-8 text-center sm:hidden">
-             <Link href="/search" className="inline-flex items-center justify-center w-full px-6 py-3 border border-gray-200 text-sm font-bold rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-colors">
+             <Link href="/search" prefetch={true} className="inline-flex items-center justify-center w-full px-6 py-3 border border-gray-200 text-sm font-bold rounded-xl text-gray-700 bg-white hover:bg-gray-50 transition-colors">
                 View all products
              </Link>
           </div>

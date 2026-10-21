@@ -33,6 +33,22 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams() {
+  const products = await prisma.product.findMany({
+    where: { isPublished: true },
+    select: { slug: true },
+    take: 100, // Pre-build top 100 products to speed up initial response
+    orderBy: [
+      { isPinned: "desc" },
+      { updatedAt: "desc" }
+    ]
+  });
+
+  return products.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 export default async function ProductPage({
   params,
 }: {
